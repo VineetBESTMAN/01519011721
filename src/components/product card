@@ -1,0 +1,34 @@
+// src/components/ProductCard.js
+import React from 'react';
+import { Card, CardContent, Typography, CardMedia } from '@mui/material';
+
+const ProductCard = ({ product }) => {
+  return (
+    <Card>
+      <CardMedia
+        component="img"
+        height="140"
+        image={product.imageUrl}
+        alt={product.name}
+      />
+      <CardContent>
+        <Typography variant="h6">{product.name}</Typography>
+        <Typography variant="body2" color="textSecondary">
+          {product.company}
+        </Typography>
+        <Typography variant="body1">${product.price}</Typography>
+        <Typography variant="body2" color="textSecondary">
+          Rating: {product.rating}
+        </Typography>
+        <Typography variant="body2" color="textSecondary">
+          Discount: {product.discount}%
+        </Typography>
+        <Typography variant="body2" color="textSecondary">
+          Availability: {product.availability ? 'In stock' : 'Out of stock'}
+        </Typography>
+      </CardContent>
+    </Card>
+  );
+};
+
+export default ProductCard;
