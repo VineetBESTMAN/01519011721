@@ -1,7 +1,10 @@
 # 01519011721
 
 Q)1
+
 top_products_microservice/
+
+
 ├── app/
 │   ├── __init__.py
 │   ├── main.py
@@ -24,3 +27,29 @@ top_products_microservice/
 
 
 ![Screenshot (733)](https://github.com/VineetBESTMAN/01519011721/assets/92422434/cdc71068-0ee4-47d6-94a7-df140f4a249e)
+
+
+
+Q)2 
+
+src/
+│
+├── components/
+│   ├── ProductList.js
+│   ├── ProductDetail.js
+│   ├── ProductFilter.js
+│   ├── ProductCard.js
+│   └── Pagination.js
+│
+├── pages/
+│   ├── AllProductsPage.js
+│   └── ProductDetailPage.js
+│
+├── graphql/
+│   ├── queries.js
+│   └── client.js
+│
+├── App.js
+├── index.js
+└── App.css
+
