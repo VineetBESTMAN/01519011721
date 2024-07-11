@@ -1,0 +1,68 @@
+// src/components/ProductFilter.js
+import React from 'react';
+import { TextField, Button, Grid } from '@mui/material';
+
+const ProductFilter = ({ filters, setFilters, applyFilters }) => {
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFilters({ ...filters, [name]: value });
+  };
+
+  return (
+    <Grid container spacing={2}>
+      <Grid item xs={12} sm={6} md={3}>
+        <TextField
+          label="Category"
+          name="category"
+          value={filters.category}
+          onChange={handleChange}
+          fullWidth
+        />
+      </Grid>
+      <Grid item xs={12} sm={6} md={3}>
+        <TextField
+          label="Company"
+          name="company"
+          value={filters.company}
+          onChange={handleChange}
+          fullWidth
+        />
+      </Grid>
+      <Grid item xs={12} sm={6} md={3}>
+        <TextField
+          label="Rating"
+          name="rating"
+          type="number"
+          value={filters.rating}
+          onChange={handleChange}
+          fullWidth
+        />
+      </Grid>
+      <Grid item xs={12} sm={6} md={3}>
+        <TextField
+          label="Price Range"
+          name="priceRange"
+          value={filters.priceRange}
+          onChange={handleChange}
+          fullWidth
+        />
+      </Grid>
+      <Grid item xs={12} sm={6} md={3}>
+        <TextField
+          label="Availability"
+          name="availability"
+          value={filters.availability}
+          onChange={handleChange}
+          fullWidth
+        />
+      </Grid>
+      <Grid item xs={12}>
+        <Button variant="contained" color="primary" onClick={applyFilters}>
+          Apply Filters
+        </Button>
+      </Grid>
+    </Grid>
+  );
+};
+
+export default ProductFilter;
